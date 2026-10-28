@@ -1,0 +1,34 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.31
+date: 2026-10-28
+sha256: ca1c1e7df1dc9df3eba9aae0d193cd8bccc7af70b4398c965fb57476eeb9baf9
+records: 8304
+bytes: 11724225
+domain_benchmarks: 5497
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Domain coverage:
+#   carbon   1474 records (A 1340, 90.9%)
+#   health   1000 records (A  995, 99.5%)
+#   telecom  1000 records (A  977, 97.7%)
+#   compute  1000 records (A  997, 99.7%)
+#   energy   1023 records (A 1008, 98.5%)
+#
+# Change log (v0.30 -> v0.31):
+#   +192 public-institution carbon records:
+#       - JS/T 303-2026 "Public Institution Carbon Emission Accounting Guide"
+#         (SAMR/GGJ, published 2026-03-23, effective 2026-04-01)
+#         71 clauses extracted from official draft-for-comments
+#         incl. Appendix A.1 fossil fuel factors (11) and
+#              Appendix A.2 provincial grid factors (32, Shanxi 0.7096 kgCO2/kWh)
+#       - Shanxi DB14/T 2001-2024 energy consumption quotas (62 records):
+#         2001 government offices, 2002 education, 2003 healthcare, 2004 venues
+#       - Statistical system (17), carbon accounts (11), energy audits (6), AI (5)
+#
+# Previous anchors in this repository: see anchors/ directory
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
