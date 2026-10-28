@@ -1,0 +1,45 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.30
+date: 2026-10-28
+sha256: 050a1624f31b777c36f46487971881de1edf434e0fa79b78be09ad1762f67aaf
+records: 8112
+bytes: 11566363
+domain_benchmarks: 5305
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Domain coverage (all five domains now meet filing threshold):
+#   carbon   1282 records (A 1151, 89.8%)
+#   health   1000 records (A  995, 99.5%)
+#   telecom  1000 records (A  977, 97.7%)
+#   compute  1000 records (A  997, 99.7%)
+#   energy   1023 records (A 1008, 98.5%)
+#
+# Change log (v0.24 -> v0.30):
+#   +586 compute: TOP500 June 2026 per-system, MIIT green data centers,
+#                 national computing hubs (8) and clusters (10)
+#   +356 energy:  MIIT battery recycling whitelist (batch 5: 68 firms),
+#                 100 firms removed from echelon-use list, NBS statistics
+#   +354 energy:  Hebei 97 storage pilot projects, Inner Mongolia 31 sites,
+#                 16 months of NBS energy production data
+#   +552 health:  food composition (China FCT 6th ed), DRIs 2023, MET values,
+#                 dietary guidelines, food safety standards
+#   +86  health:  organ/mushroom/nut/grain composition, child DRI, MET
+#   +563 telecom: 3GPP specs (249), NR/LTE bands from ETSI PDFs (121),
+#                 Wi-Fi channels (39), ITU-R recommendations (28),
+#                 satellite constellations (11), IoT technologies (11)
+#   +163 carbon:  End-of-life tyre (ELT) industry data, USTMA/Weibold/ETRMA
+#   +44  mapping: China-EU carbon footprint standards correspondence (2->46)
+#   +156 methods: carbon metrology methods from SAMR 2026 catalogue (12->168)
+#   +184 devices: carbon metrology standard devices (10->194)
+#
+# Correction note:
+#   -4 records demoted A->B (no source_url, strict criteria) [in v0.23]
+#   +3 records flagged for data content errors [in v0.23]
+#
+# Previous anchors in this repository: see anchors/ directory
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
