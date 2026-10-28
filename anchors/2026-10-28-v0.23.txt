@@ -1,0 +1,30 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.23
+date: 2026-10-28
+sha256: 34160d9bab8041d75d103152d14fedcedd1ced6119a31188ec8b791402c52867
+records: 5538
+bytes: 8585205
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Change log (this release):
+#   +107 records: 2024 gap fill (carbon domain, was 0 records in 2024)
+#   +232 records: 2025-2026 update (66 new GB/T standards, CNCA rules,
+#                15th Five-Year carbon peak plan, national ETS expansion)
+#   +rCB round 1: evidence grade upgrade (domestic/international/vendors)
+#   +rCB round 2: Vow ASA source replaced with verifiable press release
+#   -4 demoted A->B: records without source_url (strict A-grade criteria)
+#   +3 flagged: data content errors under review (Yuguan/Liwei/PTG)
+#
+# Composition note:
+#   - v0.20 -> v0.21: +107 (2024 carbon gap), knowledge_cards/patents field fix,
+#                     rCB grade upgrade round 1
+#   - v0.21 -> v0.22: +232 (2025-2026 carbon expansion)
+#   - v0.22 -> v0.23: rCB round 2 quality fixes (no record count change)
+
+# Previous anchors in this repository: see anchors/ directory
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
