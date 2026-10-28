@@ -1,0 +1,17 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.20
+date: 2026-10-28
+sha256: b687a7023a7acc741cb57b9fe40b7748827a159e3993e013ee77a43b473b76e5
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Change log (this release):
+#   +240 records from the European Commission CBAM transitional default values
+#   (Commission document, 22 December 2023)
+
+# Previous anchors in this repository: see anchors/ directory
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.

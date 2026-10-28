@@ -1,0 +1,12 @@
+# 绝不提交数据本体
+*.json
+!anchors/*.txt
+data/
+*.db
+*.sqlite
+*.sqlite3
+
+# 本地临时
+_tmp/
+.DS_Store
+Thumbs.db
