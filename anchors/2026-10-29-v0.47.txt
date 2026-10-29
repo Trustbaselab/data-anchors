@@ -1,0 +1,36 @@
+# Trustbase Lab Data Anchor
+version: v0.47
+date: 2026-10-29
+sha256: 9b0b7f6414d4b55291b9edbdbb5f0ae763ed1a3ce506491210db48c258691489
+records: 8363
+bytes: 11906092
+
+# Change log (2026-10-29, business-critical correction):
+#   v0.47  Substitution boundary correction — market segmentation
+#
+#   IMPORTANT CORRECTION from Ethan (Trustbase Lab founder), 2026-10-29:
+#   "再生的替换边界，应该是70%到100%替换，基于非轮胎市场"
+#
+#   Before: all substitution data was tyre-market oriented
+#           (single-digit percentages, India ETRA/ATMA sources)
+#
+#   After: split into two market segments
+#     Non-tyre market (primary battlefield):
+#       substitution ratio 70%-100%
+#       confidence: business judgment (Ethan 2026-10-29)
+#       examples: seals, gaskets, hoses, conveyor belts, vibration
+#                 dampers, colour/conductive masterbatch, coatings,
+#                 inks, footwear, construction/asphalt modification
+#     Tyre market:
+#       substitution ratio low single-digit to single-digit percent
+#       confidence: industry public sources (India ETRA/ATMA)
+#
+#   WHY THIS MATTERS:
+#   The non-tyre market allows 10-30x higher substitution ratios
+#   than the tyre market. This is where rCB's real commercial
+#   opportunity lies — and the previous dataset completely missed it.
+#
+#   Verified via online rCB agent: queries about substitution ratio
+#   now correctly return both market segments.
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
