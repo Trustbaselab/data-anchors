@@ -1,0 +1,39 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.38
+date: 2026-10-29
+time: 20261029-123922
+sha256: fe1cb9bf1dc4b05b1d7e42b7ba4f6a147c4af36740225f510f98c33c63a42581
+records: 8304
+bytes: 11790795
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Domain coverage:
+#   carbon   1474 records
+#   health   1000 records
+#   telecom  1000 records
+#   compute  1000 records
+#   energy   1023 records
+#
+# rCB modules (8):
+#   grades            143 (A 123, 86.0%)
+#   vendors            58 (A  44, 75.9%)
+#   domestic           39 (A  31, 79.5%)
+#   international      35 (A  27, 77.1%)
+#   techs              44 (A  37, 84.1%)
+#   policies           49 (A  40, 81.6%)
+#   patents            40 (A  37, 92.5%)
+#   knowledge_cards    58 (A  44, 75.9%)
+#
+# Change log:
+#   v0.34  patents verification upgrade (A 0% -> 92.5%, 40 records)
+#   v0.35  JS/T 303-2026 official standard corrections (43 records)
+#   v0.36  JS/T 303-2026 full-text corrections for terms/principles (24 records)
+#   v0.37  JS/T 303-2026 source URL + status unification (96 records)
+#   v0.38  rCB repair batches merged (grades 29 + knowledge_cards 6 changes)
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
