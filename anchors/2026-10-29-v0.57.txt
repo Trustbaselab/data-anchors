@@ -1,0 +1,43 @@
+# Trustbase Lab Data Anchor
+version: v0.57
+date: 2026-10-29
+sha256: dc7555c6824dc9cd8e148e919c571a2dcceeb497506dba67fbb648232139f4ce
+records_primary: 6455
+records_all: 8848
+bytes: ~12.2 MB
+
+# Change log 2026-10-29 (late night):
+
+#   v0.57  Added 2 ASTM standards completing the D36 rCB series:
+#     ASTM D8654-26  rCB Life-Cycle Assessment / Interim PCR
+#       Verified via 国家数字标准馆 (CNIS, China National Institute of
+#       Standardization) official page - A grade, full clause text obtained
+#       Issued 2026-03-01, ICS 13.020.40, owner subcommittee D36.40
+#     ASTM D8685  Laser diffraction particle size of milled rCB bound
+#       agglomerates. Approved 2026-10-29 by ASTM D36.
+#       Verified via 中国橡胶工业协会炭黑白炭黑分会 official page.
+#       Note: astm.org returns 403, so technical details rely on the
+#       industry association's reprint of the ASTM announcement.
+
+#   rCB dataset (for filing) completed:
+#     "再生炭黑与原生炭黑牌号性能检测及替代判定数据集"
+#     4-layer structure, 133 records, A-grade 113 (85.0%)
+#       L1 test-method standards:  75 records, A=100%
+#       L2 native grade parameters: 29 records, A=82.8%
+#       L3 substitution rules:      5 dimensions / 19 items
+#       L4 extended records:       24 records (source nature disclosed)
+#     Main body (L1+L2): 104 records, A=99 (95.2%)
+
+#   hash algorithm of the 山西 platform hashTool REVERSED:
+#     数据hash(256) = SHA256(file bytes), lowercase
+#     数据hash(512) = SHA512(file bytes), lowercase
+#     hash校验码    = MD5(SHA256_value + SHA512_value + "IPPH"), UPPERCASE
+#     NOT the file's MD5. Verified three ways:
+#       1. IL disassembly of button2_Click (ldstr "IPPH", String.Concat,
+#          then GetMd5Hash)
+#       2. Reflection: loaded the x86 assembly in 32-bit PowerShell and
+#          invoked its own methods on our zip files
+#       3. User ran the GUI tool: showed "完成" with matching check code
+#     Python reproduction now yields identical values.
+
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
