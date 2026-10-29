@@ -1,0 +1,46 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.43
+date: 2026-10-29
+time: 2026-10-29 17:50
+sha256: cbfec46953cd0cbe343240836d022443590d3a3f31f049bd376a7e0af4330518
+records: 8347
+bytes: 11867657
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+
+# Change log 2026-10-29 (data mining, 43 new records):
+#   v0.41  REACH Annex XVII Entry 50 PAH limits (17 records, all A-grade)
+#   v0.42  ISCC PLUS certification requirements (14 records: 13 A + 1 B)
+#   v0.43  N550/N330 carbon black price series + rCB pricing (12 records: 10 A + 2 B)
+
+# Key findings:
+#
+# 1. REACH Annex XVII Entry 50 is the real EU compliance gate for rCB,
+#    NOT food-contact regulation (EU 10/2011 applies to food-contact plastics
+#    only, not tyres). Three rCB pathways:
+#    - Synthetic turf granules: sum of 8 PAHs <= 20 mg/kg (from 2022-08-10)
+#    - Tyres: indirect via extender oils + Bay protons <= 0.35%
+#    - Consumer articles: each PAH <= 1 mg/kg; toys <= 0.5 mg/kg
+#
+# 2. ISCC PLUS officially classifies rCB as a CO-PRODUCT (not residue).
+#    Source: ISCC PLUS 202-5 Waste and Residues v1.1, section 2.3.
+#    Only tyres NOT fit for reuse/recycling count as ISCC waste.
+#    Point of Origin = tyre sorting operator, not the pyrolysis plant.
+#
+# 3. Carbon black price structure (6 observations, Jan-Oct 2026):
+#    N550 - N330 = 500 CNY/t (constant, 6/6)
+#    N220 - N330 = 1000 CNY/t (constant, 6/6)
+#    N660 = N330 (constant, 6/6)
+#    All grades rose 3220 CNY/t Jan->Oct 2026 (+43% to +51%)
+#    Carbon black price movement is a PURE LEVEL SHIFT, grade spreads are
+#    structurally constant. Therefore rCB's absolute customer savings grow
+#    with native carbon black prices.
+#
+# Source: China Rubber Industry Association (CRIA) weekly market reports,
+# data provided by Longzhong Information.
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
