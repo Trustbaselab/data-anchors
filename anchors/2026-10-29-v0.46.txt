@@ -1,0 +1,29 @@
+# Trustbase Lab Data Anchor
+version: v0.46
+date: 2026-10-29
+sha256: c2b43dd8ec896d9cc15c4499ea72616b871ac452515b2276ca1480a025ba4a12
+records: 8363
+bytes: 11904459
+
+# Change log (P0 bug fixes, 2026-10-29 evening):
+#   v0.46  Fixed 2 data-structure bugs + 1 product bug
+#
+#   Bug 1: params.note was a string (3 records)
+#     rcb-grade-acetylene / super-p / ensaco-250g
+#     MCP get_grade crashed with "'str' object has no attribute 'get'"
+#     Fix: moved note to sourced.note, removed params.note
+#
+#   Bug 2: 10 records had params values = "tbd" (string, not dict)
+#     rcb-grade-ds-en332/en660/fn331/fn660/fn662
+#     rcb-grade-bolderblack/pyrum-ttb/envirocb/blackbear-rcc/hs-pyro-cb
+#     Same crash. Fix: removed tbd keys, noted in sourced.note
+#
+#   Bug 3 (product bug): _find_grade matching logic was flawed
+#     Original code only uppercased the query, not record fields;
+#     did not normalize spaces vs hyphens vs brackets.
+#     Result: "ENSACO-250G" could not match "ENSACO 250G";
+#             "乙炔黑" could not match "Acetylene Black（乙炔黑）"
+#     Fix: added _norm_grade_key() normalization + name_zh/name_en/key fields
+#     Verified: all 5 test queries now return correct data
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
