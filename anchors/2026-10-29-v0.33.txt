@@ -1,0 +1,43 @@
+# Trustbase Lab Data Anchor
+# Only the hash is recorded. No data content, no structure, no sources.
+
+version: v0.33
+date: 2026-10-29
+sha256: 9d931cb23f3681ea426dd58029da0b92bf500c0b8fc0e4e11fce45e1f71f7dfb
+records: 8304
+bytes: 11733279
+domain_benchmarks: 5497
+
+# Verification:
+#   sha256sum data.json
+#   -> should equal the value above
+#
+# Domain coverage:
+#   carbon   1474 records (A 1340, 90.9%)
+#   health   1000 records (A  995, 99.5%)
+#   telecom  1000 records (A  977, 97.7%)
+#   compute  1000 records (A  997, 99.7%)
+#   energy   1023 records (A 1008, 98.5%)
+#
+# Data quality audit (2026-10-29):
+#   ID duplicates:                 0
+#   key duplicates:                0
+#   name duplicates:              11 groups, ALL annotated with duplicate_of
+#                                 (same fact from multiple sources, not an error)
+#   missing required fields:       0
+#   A-grade without source_url:    0
+#   E-grade without "unverified":  0
+#   as_of future-year anomalies:   0 (13 records had target-year in as_of,
+#                                    moved to target_year field)
+#
+# Change log (v0.31 -> v0.33):
+#   v0.32: audit fixes
+#     - 67 records: "product — cited standard" names now include the standard
+#                   code, making them unique
+#     - 15 records: cross-domain duplicates annotated with related_ids
+#     - 13 records: same-fact multi-source annotated with duplicate_of
+#     - 13 records: as_of target-years moved to target_year field
+#   v0.33: remaining key duplicates fixed (28 records)
+#
+# Previous anchors in this repository: see anchors/ directory
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
