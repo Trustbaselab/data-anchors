@@ -1,0 +1,76 @@
+# Trustbase Lab Filing Anchor - 2026-10-30 02:50
+# Data version stays at v0.57 (no data change tonight, only materials)
+
+## Four filing batches ready (all pass consistency check 20/20)
+
+BATCH-1  Product carbon footprint certification rules   215 records A=100%
+         Status: submitted 2026-10-29 12:10:58, pending acceptance (待受理)
+         KNOWN ISSUES: (a) submitted unsigned docx, signed PDF was made 19min later
+                       (b) hash校验码 may be wrong
+         FIX: re-submit with signed PDF + correct check code A555192355D55CE8870C4677DACA8404
+
+BATCH-RCB  Recovered carbon black grade performance   133 records A=113 (85.0%)
+           Main body (test methods 75 + grade params 29) = 104 recs, A=99 (95.2%)
+           Extended layer 24 recs listed separately, source nature disclosed honestly
+           zip: 数据集合样例结构-rcb-133条.zip  32,597 bytes
+           256: b3a71c3a7399e9750450c126fc9aeb2115eef79eebebf509bd69b233dad99d28
+           512: e060b685cfcccb3885ac86f3b669c006bd4fcb06f1c56c8f3c19f8d85450d5d63b2ea996b58fd7a24f66f0bebc05d988eba937c97553d3255e0179c77834ce0c
+           check: 3D1A98BE886890297BB9DE0CDEA2929D
+
+BATCH-2  Public institution carbon accounting        170 records A=100%
+         zip: 数据集合样例结构-gonggongjigou-170条.zip  35,605 bytes
+         REGENERATED tonight: grid factor 0.7096 -> 0.6634 (JS/T 303-2026 Annex A.2)
+         256: cb9f46cf3f1f5a3010f3c3d5e60354186a224fe09c078a9af30ddc8d05614191
+         512: 22455331f4737a8cd06f73c32f5907fb8c6366901de02c6543870dfbe61973427f21c6ca37142eda1bb0f36ced89778975cc7f8c5e0d958008023c35f95e4f38
+         check: 16741F3A3EB68D28B9B137102CA1C25F
+
+BATCH-3  Carbon metrology technical methods         168 records A=100%
+         zip: 数据集合样例结构-tanjiliang-fangfa-168条.zip  33,601 bytes
+         256: 78ba36e4a59e5e91eb75c9fa3eabf21bc65da524e602ae409065c14e5fb01a09
+         512: 447d76efa0be072b36f36d8449c153cf531300c617ee671eb55a00e2816f3bbe29bd6e17d6507bdccf593c62fadea6a52487f118f67367a92372caff8527ff2f
+         check: 3EA014DA00BC0C1725B2F8078A9029DF
+
+BATCH-4  Carbon metrology standard devices          194 records A=100%
+         zip: 数据集合样例结构-tanjiliang-zhuangzhi-194条.zip  30,958 bytes
+         256: f557b09772886d92c8b1f802d339d81477569dfe05dd1f82b68edb86af72ad3a
+         512: e4d2f138f1107e05a81858094f32abad366e2a8490375bbb39574fd859ada89caf96fbd3c88b7bc166a3ad0161290ad0122e367b2ff8e5473e88a6d366e87a10
+         check: 48D5A4E6CECC4942628410288763725F
+
+## Backups
+four-batches-20261030-0245.zip   1,823,476 bytes
+  sha256 abea6a40ffb2a2c3bae1b1ce6ff456f60c2ca9b12317de929961c7812e3c4888
+scripts-20261030-0245.zip        62,031 bytes
+  sha256 94cc56aa2405ea23a3fb304fd68621d2e6b16bf0b0e4c44af43a6126f34ee5ab
+
+## New tooling
+_check_filing_materials.py   filing material consistency checker
+   C1 hash (official algorithm)  C2 value vs database
+   C3 file completeness          C4 signature status
+   C5 record count consistency
+   Current state: 20 checks, 20 pass, 0 P0 failures
+
+_shanxi_hash.py              Shanxi platform hash calculator
+   hash256 = SHA256(file), lowercase
+   hash512 = SHA512(file), lowercase
+   check   = MD5(hash256 + hash512 + "IPPH"), UPPERCASE  <- NOT file MD5
+
+## Known Failure List: 22 entries
+New tonight:
+  KF-018  hash check code algorithm misunderstood (used file MD5)
+  KF-019  submitted unsigned material version
+  KF-020  packed material still contained stale data (grid factor 0.7096)
+  KF-021  missing automated material-vs-data consistency check
+  KF-022  fixed the artifact but not the source that produced it
+
+## Tomorrow morning (2026-10-30)
+1. rCB: submit 存证登记 with check code 3D1A98BE886890297BB9DE0CDEA2929D
+2. Batch-1: check its hash校验码; if wrong, withdraw and resubmit with
+   signed PDFs and check code A555192355D55CE8870C4677DACA8404
+3. Call 0351-7030297 (business line, NOT 0351-2888668) with 5 questions
+4. Batches 2/3/4: print, sign, submit when ready
+
+## Notes
+- Desktop has 20 prepared files for tomorrow morning
+- 明早操作清单-打开这个.pdf (4 pages) is the entry point
+
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
