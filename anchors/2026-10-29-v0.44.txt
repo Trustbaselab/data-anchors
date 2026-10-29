@@ -1,0 +1,25 @@
+# Trustbase Lab Data Anchor
+version: v0.44
+date: 2026-10-29
+sha256: 7902008e996de5a940e70fa33e70d69b8d33bfb37e1a6369a18a1a179ed256b4
+records: 8355
+bytes: 11887006
+
+# Change log (evening session, 2026-10-29):
+#   v0.44  REACH SVHC provisions (8 records: 6 A + 2 B)
+#     - Article 57: six SVHC criteria (CMR 1A/1B, PBT, vPvB, ED)
+#     - Article 7(2): notification duty for articles, 0.1% w/w + 1 t/y
+#     - Article 7(3): exemption if exposure can be excluded
+#     - Article 7(4): six information items for notification
+#     - Article 7(7): 6-month delay after identification
+#     - Article 7(1): registration vs 7(2) notification distinction
+#     - Article 33: supply chain information duty (B-grade summary)
+#     - Practical implications for rCB exporters (B-grade analysis)
+#
+# Night session total (rCB data mining): 51 records
+#   REACH Annex XVII Entry 50 PAH limits: 17
+#   ISCC PLUS certification:              14
+#   N550/N330 price series + pricing:     12
+#   REACH SVHC provisions:                 8
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
