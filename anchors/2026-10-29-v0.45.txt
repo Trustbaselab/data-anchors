@@ -1,0 +1,34 @@
+# Trustbase Lab Data Anchor
+version: v0.45
+date: 2026-10-29
+sha256: aee5db36eadbda6dee6081e3981d2460efaa95967ea78caf4505c32db030885b
+records: 8363
+bytes: 11903920
+
+# Change log (evening session 2, 2026-10-29):
+#   v0.45  EU tyre ESPR/EPR data (8 records, all B-grade)
+#     - Recycling Europe Tyres position paper (2026-05-18), 3 core demands
+#     - SILICA increases ash content in pyrolysis rCB (key technical finding)
+#     - Four materials affecting tyre recyclability
+#     - Recycled content targets must separate steel from rubber
+#     - DPP should mandate reporting of substances of concern
+#     - EU only recycles ~50% of ELTs
+#     - Tyres Europe opposes materials restrictions (industry split)
+#     - Synthesis: ESPR impact on rCB industry
+#
+# NOTE: All ESPR records are B-grade because the tyre-specific ESPR
+# delegated act has not yet been published. Only industry media
+# (European Rubber Journal) coverage is available. Will upgrade to
+# A-grade once official EU documents are published.
+#
+# Night session rCB data mining total: 59 records
+#   REACH Annex XVII Entry 50 PAH:  17 (all A)
+#   ISCC PLUS certification:        14 (13 A + 1 B)
+#   N550/N330 price series:         12 (10 A + 2 B)
+#   REACH SVHC provisions:           8 (6 A + 2 B)
+#   EU tyre ESPR/EPR:                8 (all B)
+#
+# Techs module: 103 records, A=84 (81.6%)
+# (A-ratio dropped from 88.4% because 8 new B-grade ESPR records added)
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
