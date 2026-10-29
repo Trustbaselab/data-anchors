@@ -1,0 +1,37 @@
+# Trustbase Lab Data Anchor
+version: v0.50
+date: 2026-10-29
+sha256: 4295ed60e4d6584be08c117c85cbd0e52e94414a511f1de7a8cb0b3b3b25af55
+records: 8516
+bytes: 12214933
+
+# Change log 2026-10-29 (data governance):
+#   v0.50  MIGRATION: 90 test-method standards moved from grades -> techs
+#
+# PROBLEM FOUND:
+#   A background agent (data-expander) added 90 carbon-black test-method
+#   standards into the `grades` module. That module should only hold carbon
+#   black GRADES. Consequences:
+#     - query_grades reported "143 grades" when only 53 are real grades
+#     - 7 ASTM standards were duplicated (already existed in techs)
+#
+# FIX APPLIED:
+#   - 90 records (21 ASTM + 69 GB/T) moved from grades to techs
+#   - 7 duplicates merged into existing techs records:
+#       ASTM D1506/D1510/D1618/D1765/D2414/D3493/D6556
+#   - 83 records added to techs (14 ASTM + 69 GB/T ... see note)
+#   - field normalisation: added public.region, full doc_number with issuer
+#     prefix, description.zh, applicability, unified key format
+#   - id prefix changed rcb-std-* -> rcb-tech-*
+#
+# RESULT (verified via live agent):
+#   grades: 143 -> 53 pure grades (native 29 / rcb 8 / conductive 6 /
+#                                   vendor_grade 10)
+#   techs:  103 -> 186, A=167 (89.8%)
+#   query_grades now correctly reports 53
+#   GB/T 3780.1 and ASTM D1506 both retrievable via query_techs
+#
+# NOTE ON TOTAL: meta.total_records went 8523 -> 8516 because 7 duplicate
+# records were removed (net -7), not because data was lost.
+#
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
