@@ -1,0 +1,39 @@
+# Trustbase Lab Data Anchor
+version: v0.54
+date: 2026-10-29
+sha256: a07ef865eb300053d7e2d632f7977767fd474fd92df9b5e879e9ace85bd9f035
+records_primary: 6453
+records_all: 8846
+bytes: 12213641
+
+# Change log 2026-10-29 (data governance round 2):
+
+#   v0.51  total_records recount
+#     DISCOVERED: meta.total_records had been inflated by a constant 2060
+#     since 2026-10-28 (verified across 8 historical backups). Root cause:
+#     the field was a running counter whose base value was once mis-set.
+#     FIX: total_records=6453 (top-level lists, recomputed),
+#          total_records_all=8846 (incl. nested dict-lists),
+#          total_records_legacy=8516 (old value, kept for history only)
+#          record_breakdown (per-module detail)
+
+#   v0.53/54  Dedup pass
+#     CRITERION: same module + same standard no + same name + same category
+#                + same value  =>  real duplicate
+#     REMOVED 3 real duplicates:
+#       tbm-2223 (GB 175-2023 cement ref; dup of tbm-2221, space diff only)
+#       tbm-608  (ISO 14064-1:2018; dup of tbm-268, trailing period diff)
+#       tbm-2212 (GB/T 44905-2024 aluminium ref; dup of tbm-2210, space diff)
+#     KEPT as legitimate multi-records (52 groups), e.g.:
+#       ISO 14064-1:2018 x4 (different angles)
+#       GB/T 24067-2024 x27 (different products citing the same standard)
+#       GB/T 48266-2026 x2 (one as accounting standard, one as milestone)
+#     Cross-module same-standard (techs vs domain_benchmarks) = domain
+#     citation, kept by design.
+
+#   Known Failure List (KF) established
+#     EXTERNAL/已知故障清单-Known-Failures.md  (15 entries)
+#     /opt/trustbase/_check_known_failures.py  (automated checker)
+#     All 7 active checks PASS.
+
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
