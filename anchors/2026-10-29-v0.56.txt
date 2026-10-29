@@ -1,0 +1,42 @@
+# Trustbase Lab Data Anchor
+version: v0.56
+date: 2026-10-29
+sha256: 15d4627465484859f0ef6cdcb1968bdcd328bed2bbca3e8a265978c8207e8587
+records_primary: 6453
+records_all: 8846
+bytes: 12212706
+
+# Change log 2026-10-29 (data health pass):
+
+#   v0.55  Flat dotted keys fixed (48 keys across 4 records)
+#     Records rcb-grade-n120/n125/n231/n351 had sourced-level keys like
+#     "params.iodine_absorption.cross_ref.standard" instead of nested dicts.
+#     These were DATA ISLANDS - MCP could not read them. Restored to nested.
+
+#   v0.56  EC-300J / EC-600JD value conflict resolved
+#     Found BOTH old and new values coexisting:
+#       EC-300J  nested dbp_absorption = 310-345 (WRONG, old)
+#                flat key               = 360 (CORRECT, Lion official)
+#       EC-600JD nested bet_surface_area = 1300-1500 (WRONG, old)
+#                flat key                 = 1270 (CORRECT)
+#     Root cause: v0.39 fixed the flat keys but never synced the nested ones.
+#     Fix: overwrote nested with Lion official typical values, deleted flat keys.
+#     Verified online: EC-300J DBP=360, EC-600JD BET=1270 both correct now.
+
+#   Known Failure List expanded to 17 entries:
+#     KF-016 flat dotted keys -> data islands (fixed, checker added)
+#     KF-017 MCP get_grade_spec does not expose cross_ref field
+#            (data intact, tool gap, not yet fixed)
+
+#   Full-library schema inventory completed
+#     3 distinct schemas in the database:
+#       standard (public/sourced) - grades, vendors, domestic, ...
+#       knowledge_card (flat)     - knowledge_cards
+#       patent (flat + public)    - patents
+#     This is historical design inconsistency, NOT missing data.
+#     Decision: do NOT rename fields (would break MCP); produce a
+#     field-mapping table as filing attachment instead.
+
+# All 7 automated KF checks PASS.
+
+# Trustbase Lab - Shanxi Zhixin Hengji Technology Co., Ltd.
